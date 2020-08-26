@@ -7,28 +7,27 @@ using System;
 class MainClass {
 
   public static int LerNumb(char oper, int n1, int n2){
-    
+    double resultado;
     switch(oper){
       case '+':
-        return n1+n2;
+        resultado = n1+n2;
       case '-':
-        return n1-n2;
+        resultado =  n1-n2;
       case '*':
-        return n1*n2;
+        resultado =  n1*n2;
       case '/':
-        return n1/n2;
+        resultado =  n1/n2;
       default:
-        return "erro";
-    }
+        resultado =  -9;
+    }return resultado;
   }
   public static void Main () {
     Console.WriteLine("Informe o operador (+, -, *, /) ");
-    oper = Console.ReadLine();
+    char oper = char.Parse(Console.ReadLine());
     Console.WriteLine("Informe o primeiro número >> ");
-    n1 = (Console.ReadLine();
+    int n1 = int.Parse(Console.ReadLine());
     Console.WriteLine("Informe o segundo número >> ");
-    n2 = int.Parse(Console.ReadLine();
-    Console.WriteLine(LerNumb(n1,n2,oper));
+    int n2 = int.Parse(Console.ReadLine());
+    //Console.WriteLine(LerNumb(n1,n2,oper));
   }
-
 }
