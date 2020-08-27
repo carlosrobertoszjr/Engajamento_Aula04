@@ -6,28 +6,38 @@ using System;
 
 class MainClass {
 
-  public static int LerNumb(char oper, int n1, int n2){
+  public static double LerNumb(char oper, double n1, double n2){
     double resultado;
+
     switch(oper){
-      case '+':
-        resultado = n1+n2;
-      case '-':
-        resultado =  n1-n2;
-      case '*':
-        resultado =  n1*n2;
-      case '/':
-        resultado =  n1/n2;
-      default:
-        resultado =  -9;
-    }return resultado;
+        case '+':
+          resultado = n1+n2;
+          break;
+        case '-':
+          resultado =  n1-n2;
+          break;
+        case '*':
+          resultado =  n1*n2;
+          break;
+        case '/':
+          resultado =  n1/n2;
+          break;
+        default:
+          resultado =  -1;
+          break;
+      }return resultado;
   }
   public static void Main () {
+    //lendo variáveis
     Console.WriteLine("Informe o operador (+, -, *, /) ");
     char oper = char.Parse(Console.ReadLine());
     Console.WriteLine("Informe o primeiro número >> ");
-    int n1 = int.Parse(Console.ReadLine());
+    double n1 = double.Parse(Console.ReadLine());
     Console.WriteLine("Informe o segundo número >> ");
-    int n2 = int.Parse(Console.ReadLine());
-    //Console.WriteLine(LerNumb(n1,n2,oper));
+    double n2 = double.Parse(Console.ReadLine());
+    Console.Write("Resultado >> ");
+
+    //chamando função
+    Console.WriteLine(LerNumb(oper,n1,n2));
   }
 }
